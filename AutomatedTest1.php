@@ -65,7 +65,7 @@ function isLoginSuccessful(RemoteWebDriver $driver): bool
 try {
     // Test case: Valid credentials
     echo "Testing valid login...\n";
-    login($driver, 'admin_user', 'secure_password');
+    login($driver, 'testuser', 'testpass');
 
     if (isLoginSuccessful($driver)) {
         echo "Valid login test passed.\n";
@@ -76,7 +76,7 @@ try {
     // Add more test cases as needed
     // Test case: Invalid credentials
     echo "Testing invalid login...\n";
-    login($driver, 'fake_user', 'wrong_password');
+    login($driver, 'fake_user', 'testpass');
 
     if (!isLoginSuccessful($driver)) {
         echo "Invalid login test passed.\n";
